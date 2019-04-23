@@ -8,11 +8,19 @@ import { DataContractsService } from 'src/app/core/api/data-contracts.service';
 })
 export class IndexComponent implements OnInit {
   public dataContr: any; 
+  public metaData: any;
+  public rows: any;
+
   constructor(public dataContractsService: DataContractsService) { 
     dataContractsService.getList().subscribe(data => {
       this.dataContr = data;
-      console.log(this.dataContr);
+
+      this.metaData = this.dataContr.data.metaData
+      this.rows = this.dataContr.data.rows
+      console.log(this.metaData)
+      console.log(this.rows)
       debugger
+
       return this.dataContr;
     })
   }
