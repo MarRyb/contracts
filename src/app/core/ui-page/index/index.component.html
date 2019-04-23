@@ -1,38 +1,86 @@
-<table class="data-table">
-  <tr class="data-table__header">
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-    <td>10</td>
-    <td>11</td>
-    <td>12</td>
-    <td>13</td>
-    <td>14</td>
-    <td>15</td>
-    <td>16</td>
-  </tr>
-  <tr class="data-table__body">
-    <td>Data 1</td>
-    <td>Data 2</td>
-    <td>Data 3</td>
-    <td>Data 4</td>
-    <td>Data 5</td>
-    <td>Data 6</td>
-    <td>Data 7</td>
-    <td>Data 8</td>
-    <td>Data 9</td>
-    <td>Data 10</td>
-    <td>Data 11</td>
-    <td>Data 12</td>
-    <td>Data 13</td>
-    <td>Data 14</td>
-    <td>Data 15</td>
-    <td>Data 16</td>
-  </tr>
-</table>
+<div class="scroll-table">
+  <table class="data-table">
+    <tr class="data-table__header">
+      <td>Action DEL</td>
+      <td>Action ADD</td>
+      <td>ACC1NUM</td>
+      <td>BIRTHDATE</td>
+      <td>CARD</td>
+      <td>CARDTEMPLNAME</td>
+      <td>
+        <p class="mod-center">CURRNAME</p>
+      </td>
+      <td>DOCNUM</td>
+      <td>DOCSERIES</td>
+      <td>DOCTYPENAME</td>
+      <td>
+        <p class="mod-center">FIRSTNAME</p>
+      </td>
+      <td>IDCARD</td>
+      <td>IDPERSON</td>
+      <td>IDTASKAUTHSTATUS</td>
+      <td>
+        <p class="mod-center">LASTNAME</p>
+      </td>
+      <td>ORGNAMESHORT</td>
+      <td>PATRONYMIC</td>
+      <td>PERSONTYPENAME</td>
+      <td>STATUSNAME</td>
+    </tr>
+    <tr class="data-table__body" *ngFor="let item of newObject; index as i;">
+      <td class="item_delete" (click)="delItem(item, i)">
+        <p>{{'Удалить'}}</p>
+      </td>
+      <td class="item_add" (click)="addItemCopy(item, i)">{{'Скопировать item и Добавить в список'}}</td>
+      <td>{{item.ACC1NUM}}</td>
+      <td>{{item.BIRTHDATE | date:"MM/dd/yyyy"}}</td>
+      <td>{{item.CARD}}</td>
+      <td>{{item.CARDTEMPLNAME}}</td>
+      <td>
+        <p class="mod-center">{{item.CURRNAME}}</p>
+      </td>
+      <td>{{item.DOCNUM}}</td>
+      <td>{{item.DOCSERIES}}</td>
+      <td>{{item.DOCTYPENAME}}</td>
+      <td>
+        <p class="mod-center">{{item.FIRSTNAME}}</p>
+      </td>
+      <td>{{item.IDCARD}}</td>
+      <td>{{item.IDPERSON}}</td>
+      <td>{{item.IDTASKAUTHSTATUS}}</td>
+      <td>
+        <p class="mod-center">{{item.LASTNAME}}</p>
+      </td>
+      <td>{{item.ORGNAMESHORT}}</td>
+      <td>{{item.PATRONYMIC}}</td>
+      <td>{{item.PERSONTYPENAME}}</td>
+      <td>{{item.STATUSNAME}}</td>
+    </tr>
+  </table>
+</div>
+  
+
+
+
+
+<div class="block-added-items">
+  <input type="text" name="ACC1NUM" [(ngModel)]="newContract.ACC1NUM">
+  <input type="text" name="BIRTHDATE" [(ngModel)]="newContract.BIRTHDATE">
+  <input type="text" name="CARD" [(ngModel)]="newContract.CARD">
+  <input type="text" name="CARDTEMPLNAME" [(ngModel)]="newContract.CARDTEMPLNAME">
+  <input type="text" name="CURRNAME" [(ngModel)]="newContract.CURRNAME">
+  <input type="text" name="DOCNUM" [(ngModel)]="newContract.DOCNUM">
+  <input type="text" name="DOCSERIES" [(ngModel)]="newContract.DOCSERIES">
+  <input type="text" name="DOCTYPENAME" [(ngModel)]="newContract.DOCTYPENAME">
+  <input type="text" name="FIRSTNAME" [(ngModel)]="newContract.FIRSTNAME">
+  <input type="text" name="IDCARD" [(ngModel)]="newContract.IDCARD">
+  <input type="text" name="IDPERSON" [(ngModel)]="newContract.IDPERSON">
+  <input type="text" name="IDTASKAUTHSTATUS" [(ngModel)]="newContract.IDTASKAUTHSTATUS">
+  <input type="text" name="LASTNAME" [(ngModel)]="newContract.LASTNAME">
+  <input type="text" name="ORGNAMESHORT" [(ngModel)]="newContract.ORGNAMESHORT">
+  <input type="text" name="PATRONYMIC" [(ngModel)]="newContract.PATRONYMIC">
+  <input type="text" name="PERSONTYPENAME" [(ngModel)]="newContract.PERSONTYPENAME">
+  <input type="text" name="STATUSNAME" [(ngModel)]="newContract.STATUSNAME">
+</div>
+
+<button class="item_add" (click)="addItem()">Добавить новый элемент в массив</button>

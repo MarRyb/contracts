@@ -3,15 +3,69 @@
   margin: 0
   border-spacing: 0
   border-collapse: collapse
+  border-radius: 20px
+  overflow: hidden
   width: 100%
+  text-align: left
 
 .data-table__header
   background: #e6e6e6
+  td
+    width: 30px
+
 
 .data-table__header, 
 .data-table__body
   width: 100%
   td
     border: 1px solid #b7b7b7
-    padding: 5px 10px
+    padding: 5px 5px
     
+
+.item_delete
+  font-weight: bold
+  p 
+    color: blue
+    border-bottom: 1px solid blue
+    &:hover
+      border-bottom: 1px solid red
+      color: red
+  
+
+
+.item_add
+  background: #5ae042
+  padding: 10px
+  color: white
+  font-weight: bold
+
+.block-added-items
+  display: grid
+  margin: 120px
+
+input
+  width: 200px
+  background: #e6e6e6
+  border: 1px solid black
+  height: 25px
+  padding: 5px 10px
+
+
+.data-table__body
+  &:hover
+    font-weight: 800
+    cursor: pointer
+    background: #eee
+
+
+td .mod-center
+  text-align: center
+
+
+.scroll-table
+  overflow-x: auto
+  width: 1400px
+  height: 400px
+  overflow-y: auto
+  border: 1px solid #b7b7b7
+  border-radius: 25px
