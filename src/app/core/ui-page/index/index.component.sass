@@ -70,3 +70,62 @@ input
   overflow-y: auto
   border: 1px solid #b7b7b7
   border-radius: 25px
+
+
+
+/* Блочная верстка - стилизация  + адаптивность поведения блоков*/
+
+
+.block
+  display: grid
+  border: 1px dashed #8c8
+  padding: 1px
+  grid-gap: 1px
+
+.block-item
+  border: 1px solid blue
+  display: inline-block
+  margin-bottom: 10px
+  background: #13b6e7
+  vertical-align: top
+  text-align: left
+  line-height: normal
+  margin: 0 5px
+  width: 1030px
+
+
+
+
+
+
+.grid 
+  display: grid
+  padding: 1px
+  grid-gap: 1px
+  grid-template-columns: 30% 30% 40%
+
+.grid-fit 
+  grid-template-columns: repeat(auto-fit)
+
+.grid-fill 
+  grid-template-columns: repeat(auto-fill)
+
+.grid-centered 
+  justify-content: center
+
+.grid-justified 
+  justify-content: space-between
+
+.grid-evenly 
+  justify-content: space-evenly
+
+.item 
+  box-sizing: border-box
+  background: #eee 
+  border: 1px solid black
+  padding: 1em
+  margin: 10px
+
+.grid-item
+  border-bottom: 1px solid black
+  font-size: 14px

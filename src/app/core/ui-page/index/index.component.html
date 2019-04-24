@@ -92,8 +92,32 @@
 
 
 <hr>
-<h1 class="mod-center">Блочная верстка</h1>
+  <h1 class="mod-center">Блочная верстка</h1>
 <hr>
+
+
 
 <!-- Вид блочной верстки -->
 
+
+<div class="grid grid-fill grid-justified">
+  <div *ngFor="let item of newObject; index as i;" class="item">
+    <div class="grid-item">{{item.ACC1NUM}}</div>
+    <div class="grid-item">{{item.BIRTHDATE | date:"MM/dd/yyyy"}}</div>
+    <div class="grid-item">{{item.CARD}}</div>
+    <div class="grid-item">{{item.CARDTEMPLNAME}}</div>
+    <div class="grid-item">{{item.CURRNAME}}</div>
+    <div class="grid-item">{{item.DOCNUM}}</div>
+    <div class="grid-item">{{item.DOCSERIES}}</div>
+    <div class="grid-item">{{item.DOCTYPENAME}}</div>
+    <div class="grid-item">{{item.FIRSTNAME}}</div>
+    <div class="grid-item">{{item.IDCARD}}</div>
+    <div class="grid-item">{{item.IDPERSON}}</div>
+    <div class="grid-item">{{item.IDTASKAUTHSTATUS}}</div>
+    <div class="grid-item">{{item.LASTNAME}}</div>
+    <div class="grid-item">{{item.ORGNAMESHORT}}</div>
+    <div class="grid-item">{{item.PATRONYMIC}}</div>
+    <div class="grid-item">{{item.PERSONTYPENAME}}</div>
+    <div class="grid-item">{{item.STATUSNAME}}</div>
+  </div>  
+</div>
