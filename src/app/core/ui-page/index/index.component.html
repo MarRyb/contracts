@@ -1,3 +1,8 @@
+<!-- Вид табличной верстки -->
+<hr>
+<h1 class="mod-center">Табличная верстка</h1>
+<hr>
+
 <div class="scroll-table">
   <table class="data-table">
     <tr class="data-table__header">
@@ -58,29 +63,37 @@
     </tr>
   </table>
 </div>
-  
-
-
-
 
 <div class="block-added-items">
-  <input type="text" name="ACC1NUM" [(ngModel)]="newContract.ACC1NUM">
-  <input type="text" name="BIRTHDATE" [(ngModel)]="newContract.BIRTHDATE">
-  <input type="text" name="CARD" [(ngModel)]="newContract.CARD">
-  <input type="text" name="CARDTEMPLNAME" [(ngModel)]="newContract.CARDTEMPLNAME">
-  <input type="text" name="CURRNAME" [(ngModel)]="newContract.CURRNAME">
-  <input type="text" name="DOCNUM" [(ngModel)]="newContract.DOCNUM">
-  <input type="text" name="DOCSERIES" [(ngModel)]="newContract.DOCSERIES">
-  <input type="text" name="DOCTYPENAME" [(ngModel)]="newContract.DOCTYPENAME">
-  <input type="text" name="FIRSTNAME" [(ngModel)]="newContract.FIRSTNAME">
-  <input type="text" name="IDCARD" [(ngModel)]="newContract.IDCARD">
-  <input type="text" name="IDPERSON" [(ngModel)]="newContract.IDPERSON">
-  <input type="text" name="IDTASKAUTHSTATUS" [(ngModel)]="newContract.IDTASKAUTHSTATUS">
-  <input type="text" name="LASTNAME" [(ngModel)]="newContract.LASTNAME">
-  <input type="text" name="ORGNAMESHORT" [(ngModel)]="newContract.ORGNAMESHORT">
-  <input type="text" name="PATRONYMIC" [(ngModel)]="newContract.PATRONYMIC">
-  <input type="text" name="PERSONTYPENAME" [(ngModel)]="newContract.PERSONTYPENAME">
-  <input type="text" name="STATUSNAME" [(ngModel)]="newContract.STATUSNAME">
+  <div>
+    <input type="text" name="ACC1NUM" [(ngModel)]="newContract.ACC1NUM">
+    <input type="text" name="BIRTHDATE" [(ngModel)]="newContract.BIRTHDATE">
+    <input type="text" name="CARD" [(ngModel)]="newContract.CARD">
+    <input type="text" name="CARDTEMPLNAME" [(ngModel)]="newContract.CARDTEMPLNAME">
+    <input type="text" name="CURRNAME" [(ngModel)]="newContract.CURRNAME">
+    <input type="text" name="DOCNUM" [(ngModel)]="newContract.DOCNUM">
+    <input type="text" name="DOCSERIES" [(ngModel)]="newContract.DOCSERIES">
+    <input type="text" name="DOCTYPENAME" [(ngModel)]="newContract.DOCTYPENAME">
+    <input type="text" name="FIRSTNAME" [(ngModel)]="newContract.FIRSTNAME">
+    <input type="text" name="IDPERSON" [(ngModel)]="newContract.IDPERSON">  
+  </div>
+  <div>
+    <input type="text" name="IDTASKAUTHSTATUS" [(ngModel)]="newContract.IDTASKAUTHSTATUS">
+    <input type="text" name="LASTNAME" [(ngModel)]="newContract.LASTNAME">
+    <input type="text" name="ORGNAMESHORT" [(ngModel)]="newContract.ORGNAMESHORT">
+    <input type="text" name="PATRONYMIC" [(ngModel)]="newContract.PATRONYMIC">
+    <input type="text" name="PERSONTYPENAME" [(ngModel)]="newContract.PERSONTYPENAME">
+    <input type="text" name="STATUSNAME" [(ngModel)]="newContract.STATUSNAME">  
+    <input type="text" name="IDCARD" [(ngModel)]="newContract.IDCARD">
+    
+  </div>
+  <button class="item_add" (click)="addItem()">Добавить новый элемент в массив</button>
 </div>
 
-<button class="item_add" (click)="addItem()">Добавить новый элемент в массив</button>
+
+<hr>
+<h1 class="mod-center">Блочная верстка</h1>
+<hr>
+
+<!-- Вид блочной верстки -->
+
